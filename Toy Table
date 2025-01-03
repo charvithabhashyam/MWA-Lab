@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toy Information Table</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        img {
+            max-width: 100px;
+            max-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Toy Table</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Image of the Toy</th>
+                <th>Description of the Toy</th>
+                <th>Cost of the Toy</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="c:\Users\exam2\Desktop\Y22CB005\toy4.jpg" alt="Toy 1"></td>
+                <td>Minion-Same as hemaa.</td>
+                <td>500</td>
+            </tr>
+            <tr>
+                <td><img src="c:\Users\exam2\Desktop\Y22CB005\toy2.jpg" alt="Toy 2"></td>
+                <td>Peppa pig-Same as poorii.</td>
+                <td>200</td>
+            </tr>
+            <tr>
+                <td><img src="c:\Users\exam2\Desktop\Y22CB005\toy3.jpg" alt="Toy 3"></td>
+                <td>Snowman-Same as vidyaa.</td>
+                <td>300</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
+
+
+
