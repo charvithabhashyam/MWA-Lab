@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Bookstore - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Top Frame */
+        .top-frame {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #0056b3;
+            color: #fff;
+            padding: 10px 20px;
+            height: 80px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        .title {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content */
+        .main-content {
+            display: flex;
+            margin: 10px;
+            height: calc(100vh - 100px);
+        }
+
+        /* Left Frame */
+        .left-frame {
+            width: 20%;
+            background-color: #d9eaff;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .left-frame h2 {
+            color: #0056b3;
+            font-size: 20px;
+        }
+
+        .left-frame ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .left-frame li {
+            margin: 10px 0;
+        }
+
+        .left-frame a {
+            text-decoration: none;
+            color: #0056b3;
+            font-weight: bold;
+        }
+
+        .left-frame a:hover {
+            text-decoration: underline;
+        }
+
+        /* Right Frame */
+        .right-frame {
+            flex-grow: 1;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+        }
+
+        .right-frame h2 {
+            color: #0056b3;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-frame">
+        <div class="logo">
+            <img src="logo.png" alt="Bookstore Logo" width="50">
+        </div>
+        <div class="title">
+            <h1>R.V.R. & J.C. College Online Bookstore</h1>
+        </div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Login</a>
+            <a href="#">Registration</a>
+            <a href="#">Catalogue</a>
+            <a href="#">Cart</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="left-frame">
+            <h2>Categories</h2>
+            <ul>
+                <li><a href="#" onclick="loadContent('csbs')">CSBS Books</a></li>
+                <li><a href="#" onclick="loadContent('civil')">Civil Books</a></li>
+                <li><a href="#" onclick="loadContent('ece')">ECE Books</a></li>
+                <li><a href="#" onclick="loadContent('eee')">EEE Books</a></li>
+            </ul>
+        </div>
+
+        <div class="right-frame" id="content">
+            <h2>Welcome to Our Online Bookstore</h2>
+            <p>Discover a wide range of books across multiple genres. Navigate through the categories on the left to explore our catalogue.</p>
+        </div>
+    </div>
+
+    <script>
+        function loadContent(category) {
+            const content = document.getElementById("content");
+            const data = {
+                csbs: "<h2>CSBS Books</h2><p>Catalogue for CSBS-related books.</p>",
+                civil: "<h2>Civil Books</h2><p>Catalogue for Civil Engineering books.</p>",
+                ece: "<h2>ECE Books</h2><p>Catalogue for Electronics and Communication books.</p>",
+                eee: "<h2>EEE Books</h2><p>Catalogue for Electrical and Electronics books.</p>",
+            };
+            content.innerHTML = data[category] || "<p>Category not found.</p>";
+        }
+    </script>
+</body>
+</html>
