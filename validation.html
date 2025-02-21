@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Validation</title>
+  <script>
+    function validateRegistration() {
+      // Validate Name
+      var name = document.getElementById("name").value;
+      var nameRegex = /^[A-Za-z]+$/;
+      if (name.length < 6 || !name.match(nameRegex)) {
+        alert("Name must contain only alphabets and be at least 6 characters long.");
+        return false;
+      }
+
+      // Validate Password
+      var password = document.getElementById("password").value;
+      if (password.length < 6) {
+        alert("Password must be at least 6 characters long.");
+        return false;
+      }
+
+      // Validate Email
+      var email = document.getElementById("email").value;
+      var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+      if (!email.match(emailRegex)) {
+        alert("Please enter a valid email address (e.g., name@domain.com).");
+        return false;
+      }
+
+      // Validate Phone Number
+      var phone = document.getElementById("phone").value;
+      var phoneRegex = /^[0-9]{10}$/;
+      if (!phone.match(phoneRegex)) {
+        alert("Phone number must be exactly 10 digits.");
+        return false;
+      }
+
+      // If all validations pass
+      alert("Registration successful!");
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <form onsubmit="return validateRegistration()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br><br>
+    
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" required><br><br>
+    
+    <label for="phone">Phone Number:</label>
+    <input type="text" id="phone" name="phone" required><br><br>
+
+    <input type="submit" value="Register">
+  </form>
+</body>
+</html>
